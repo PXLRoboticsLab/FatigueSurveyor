@@ -7,7 +7,7 @@ This repositoy contains a simple docker container and python application for col
 ## Prerequisites
 
 ### TL;DR
-
+- clone git repositories using SSH
 - https://github.com/PXLAIRobotics/OpenCVDocker
   `git clone git@github.com:PXLAIRobotics/OpenCVDocker.git`
 
