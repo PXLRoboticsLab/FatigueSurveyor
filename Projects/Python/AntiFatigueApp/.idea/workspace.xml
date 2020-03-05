@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="65b14df1-7778-4cec-a91f-42c3c8c2e682" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YaYaTKjI0EBJNPabYUS7fn8oub" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="AntiFatigueApp" is-module-sdk="true">
+        <envs>
+          <env key="PYDEVD_USE_CYTHOd" value="NO" />
+          <env key="PYDEVD_USE_FRAME_EVAL" value="NO" />
+        </envs>
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="AntiFatigueApp" />
+        <option name="myEnvs">
+          <map>
+            <entry key="PYDEVD_USE_CYTHOd" value="NO" />
+            <entry key="PYDEVD_USE_FRAME_EVAL" value="NO" />
+          </map>
+        </option>
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Mainwindow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AntiFatigueApp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Mainwindow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AntiFatigueApp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.Mainwindow" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65b14df1-7778-4cec-a91f-42c3c8c2e682" name="Default Changelist" comment="" />
+      <created>1583182235721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583182235721</updated>
+      <workItem from="1583182238031" duration="5994000" />
+      <workItem from="1583220532708" duration="21398000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="833" y="386" width="515" height="542" key="EnvironmentVariablesDialog" timestamp="1583234909941">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="833" y="386" width="515" height="542" key="EnvironmentVariablesDialog/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583234909941" />
+    <state width="1467" height="317" key="GridCell.Tab.0.bottom" timestamp="1583253941195">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1467" height="317" key="GridCell.Tab.0.bottom/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583253941195" />
+    <state width="914" height="257" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.988@1920.0.1920.1080" timestamp="1583186643351" />
+    <state width="1467" height="317" key="GridCell.Tab.0.center" timestamp="1583253941195">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1467" height="317" key="GridCell.Tab.0.center/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583253941195" />
+    <state width="914" height="257" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.988@1920.0.1920.1080" timestamp="1583186643351" />
+    <state width="1467" height="317" key="GridCell.Tab.0.left" timestamp="1583253941195">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1467" height="317" key="GridCell.Tab.0.left/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583253941195" />
+    <state width="914" height="257" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.988@1920.0.1920.1080" timestamp="1583186643351" />
+    <state width="1467" height="317" key="GridCell.Tab.0.right" timestamp="1583253941195">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1467" height="317" key="GridCell.Tab.0.right/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583253941195" />
+    <state width="914" height="257" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.988@1920.0.1920.1080" timestamp="1583186643351" />
+    <state width="1467" height="317" key="GridCell.Tab.1.bottom" timestamp="1583253941195">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1467" height="317" key="GridCell.Tab.1.bottom/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583253941195" />
+    <state width="1467" height="317" key="GridCell.Tab.1.center" timestamp="1583253941195">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1467" height="317" key="GridCell.Tab.1.center/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583253941195" />
+    <state width="1467" height="317" key="GridCell.Tab.1.left" timestamp="1583253941195">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1467" height="317" key="GridCell.Tab.1.left/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583253941195" />
+    <state width="1467" height="317" key="GridCell.Tab.1.right" timestamp="1583253941195">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1467" height="317" key="GridCell.Tab.1.right/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583253941195" />
+    <state x="804" y="237" key="SettingsEditor" timestamp="1583241045038">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="804" y="237" key="SettingsEditor/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583241045038" />
+    <state x="748" y="632" key="com.intellij.ide.util.TipDialog" timestamp="1583223091984">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="748" y="632" key="com.intellij.ide.util.TipDialog/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583223091984" />
+    <state x="734" y="209" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583243936369">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="734" y="209" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583243936369" />
+    <state x="747" y="474" width="691" height="661" key="dock-window-1" timestamp="1583221060835">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="747" y="474" width="691" height="661" key="dock-window-1/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583221060835" />
+    <state x="747" y="474" width="691" height="661" key="dock-window-1/1920.0.1920.1080/0.27.1920.988@0.27.1920.988" timestamp="1583218958993" />
+    <state x="2667" y="354" width="691" height="661" key="dock-window-1/1920.0.1920.1080/0.27.1920.988@1920.0.1920.1080" timestamp="1583186349443" />
+    <state x="501" y="224" width="501" height="713" key="refactoring.ChangeSignatureDialog" timestamp="1583229433930">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="501" y="224" width="501" height="713" key="refactoring.ChangeSignatureDialog/0.27.1920.988/1920.0.1920.1080@0.27.1920.988" timestamp="1583229433930" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AntiFatigueApp$main.coverage" NAME="main Coverage Results" MODIFIED="1583244333738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/AntiFatigueApp$Mainwindow.coverage" NAME="Mainwindow Coverage Results" MODIFIED="1583232542390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
+</project>
