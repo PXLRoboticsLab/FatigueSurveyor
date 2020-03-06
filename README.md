@@ -7,9 +7,7 @@ This repositoy contains a simple docker container and python application for col
 ## Prerequisites
 
 ### TL;DR
-- clone git repositories using SSH
-- https://github.com/PXLAIRobotics/OpenCVDocker
-  `git clone git@github.com:PXLAIRobotics/OpenCVDocker.git`
+- pxl_air_opencv:latest
 
 
 
@@ -19,15 +17,11 @@ This repositoy contains a simple docker container and python application for col
 
 ### Building the image
 
-- [ ] `cd <Path to OpenCVDocker repository>`
 
-- [ ] `cd .. `
 
 - [ ] `git clone git@github.com:PXLRoboticsLab/FatigueSurveyor.git`
 
-- [ ] `cp -r FatigueSurveyor/* ./OpenCVDocker/
-  cd -  
-  ./0001_build_images.sh`
+- [ ]  ./0001_build_images.sh`
 
   
 
