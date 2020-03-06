@@ -13,6 +13,7 @@ if [ $vendor == "NVIDIA" ]; then
         --device /dev/snd \
 	--rm \
 	-d \
+	--network host \
         --env="DISPLAY" \
         --env="QT_X11_NO_MITSHM=1" \
         --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
@@ -32,6 +33,7 @@ else
 	-d \
         --volume=/tmp/.X11-unix:/tmp/.X11-unix \
         -v `pwd`/../Projects:/home/user/Projects \
+	--network host \
         --device=/dev/dri:/dev/dri \
         --env="DISPLAY=$DISPLAY" \
         -e "TERM=xterm-256color" \
