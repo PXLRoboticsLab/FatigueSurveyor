@@ -1,15 +1,19 @@
 import argparse
+import glob
+import os
 import threading
 import sys
 sys.path.append("../UI")
+sys.path.append("../src")
 sys.path.append("./")
-sys.path.append("./src")
- 
 from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QApplication
 import time
+
+import drive_list
 from Mainwindow import *
 from PopUp import *
+
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -93,15 +97,21 @@ def timer_timeout_warmup_cam():
         update_timer_test_label(time_left)
         time_left = time_left-1
 
-
+def upload_vid():
+    list_of_files = glob.glob('../camCaptures/*mp4')  # * means all if need specific format then *.csv
+    latest_file = max(list_of_files, key=os.path.getctime)
+    print(latest_file)
+    drive_list.uploadFile(latest_file)
 
 
 def reset_app():
     global app
     global dialog_box
     global mainwindow
-    print("reset_app"+threading.enumerate().__str__())
+    # print("reset_app"+threading.enumerate().__str__())
+
     main()
+    upload_vid()
 
 def mainwindow_init():
     global time_left

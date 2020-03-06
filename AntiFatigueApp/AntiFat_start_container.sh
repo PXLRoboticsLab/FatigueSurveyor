@@ -40,5 +40,5 @@ else
 	--name AntiFatigue \
         anti_fatigue_app:latest \
         bash &&
-    docker container exec -it anti_fatigue bash -c 'python3 main.py' && exit && docker container stop anti_fatigue 
+    docker container  exec -it anti_fatigue bash -c 'xdotool windowminimize $(xdotool getactivewindow) & python3 main.py'    && docker container stop anti_fatigue  && echo "removed container" && exit
 fi 
