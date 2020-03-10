@@ -27,7 +27,7 @@ This repositoy contains a simple docker container and python application for col
 
 ### Start Survey Application
 
-`./0002_start_AntiFat_container.sh`
+`./0002_start_FatigueSurveyor_container.sh`
 
 
 
