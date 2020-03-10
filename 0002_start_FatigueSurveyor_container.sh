@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ "$(docker ps -a | grep anti_fatigue)" ]; then
-	docker container stop anti_fatigue
+if [ "$(docker ps -a | grep fatigue_surveyor)" ]; then
+	docker container stop fatigue_surveyor
 fi
 (cd ./FatigueSurveyorContainer; ./Start_FatigueSurveyorContainer.sh)
