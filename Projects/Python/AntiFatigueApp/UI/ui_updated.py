@@ -10,6 +10,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon
 
 
+class QJumpSlider(QtWidgets.QSlider):
+    def __init__(self, parent=None):
+        super(QJumpSlider, self).__init__(parent)
+
+    def mousePressEvent(self, event):
+        # Jump to click position
+        self.setValue(QtWidgets.QStyle.sliderValueFromPosition(self.minimum(), self.maximum(), event.x(), self.width()))
+
+    def mouseMoveEvent(self, event):
+        # Jump to pointer position while moving
+        self.setValue(QtWidgets.QStyle.sliderValueFromPosition(self.minimum(), self.maximum(), event.x(), self.width()))
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
 
@@ -37,11 +49,13 @@ class Ui_Dialog(object):
         self.energy_label_bad.setGeometry(QtCore.QRect(10, 80, 67, 17))
         self.energy_label_bad.setAlignment(QtCore.Qt.AlignCenter)
         self.energy_label_bad.setObjectName("energy_label_bad")
-        self.horizontalSlider = QtWidgets.QSlider(self.frame)
+        self.horizontalSlider = QJumpSlider(self.frame)
         self.horizontalSlider.setGeometry(QtCore.QRect(40, 110, 421, 16))
         font = QtGui.QFont()
         font.setBold(False)
         font.setWeight(50)
+        #self.horizontalSlider.setMouseTracking(True)
+
         self.horizontalSlider.setFont(font)
         self.horizontalSlider.setAutoFillBackground(False)
         self.horizontalSlider.setStyleSheet("")
