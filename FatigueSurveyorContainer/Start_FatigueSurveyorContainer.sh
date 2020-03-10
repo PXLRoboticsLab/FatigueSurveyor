@@ -23,7 +23,7 @@ if [ $vendor == "NVIDIA" ]; then
         --runtime=nvidia \
 	-w="/home/user/Projects/Python/FatigueSurveyorApp/src" \
         --device=/dev/video0:/dev/video0 \
-	--name anti_fatigue \
+	--name fatigue_surveyor \
         fatigue_surveyor:latest \
         bash &&
     docker container exec -it fatigue_surveyor bash -c 'xdotool windowminimize $(xdotool getactivewindow) & python3 main.py'    && docker container stop fatigue_surveyor  && echo "removed container" && exit
@@ -39,7 +39,7 @@ else
         -e "TERM=xterm-256color" \
 	-w="/home/user/Projects/Python/FatigueSurveyorApp/src" \
         --cap-add SYS_ADMIN --device /dev/fuse \
-	--name AntiFatigue \
+	--name fatigue_surveyor \
         fatigue_surveyor:latest \
         bash &&
     docker container  exec -it fatigue_surveyor bash -c 'xdotool windowminimize $(xdotool getactivewindow) & python3 main.py'    && docker container stop fatigue_surveyor  && echo "removed container" && exit
