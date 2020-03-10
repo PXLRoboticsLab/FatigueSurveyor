@@ -47,6 +47,7 @@ recording_timer = QTimer()
 reset_timer = QTimer()
 time_left = 0
 level = 5
+seconds_untill_reset =1200
 
 
 # pop-up
@@ -190,10 +191,12 @@ def stop_recording_timer():
     timer.timeout.disconnect(showFeed)
     recording_timer.stop()
 
+
     if mainwindow is not None:
         mainwindow.cap.release()
         mainwindow.writer = None
-        mainwindow.ui.frame.show()
+        mainwindow.ui.frame.hide()
+        mainwindow.ui.timeout_frame.show()
         mainwindow.ui.image_label.setMovie(mainwindow.gif)
         mainwindow.ui.buttonBox.setEnabled(False)
         mainwindow.gif.start()
@@ -227,12 +230,38 @@ def cleanup():
     global timer
     global recording_timer
     global app
-
-    reset_timer.singleShot(1200000, close_and_reset)
+    global seconds_untill_reset
+    seconds_untill_reset=1200
+    reset_timer.start(1000)
+    reset_timer.timeout.connect(timer_timeout_countdown)
     # reset_app()
+
 
     dialog_box = None
     # mainwindow = None
+
+
+def update_timeout_frame_label(seconds_untill_reset):
+    global mainwindow
+    mainwindow.ui.timeout_frame_label.setText(f'Time untill next recording \n{int(seconds_untill_reset/60)}:{seconds_untill_reset%60}')
+
+
+
+def timer_timeout_countdown():
+    global seconds_untill_reset
+    global mainwindow
+    if seconds_untill_reset == 0:
+        # time_left=0
+        reset_timer.stop()
+        mainwindow.ui.timeout_frame.hide()
+        close_and_reset()
+        # recording_timer.timeout.connect()
+        # recording_timer.
+
+    if seconds_untill_reset >= 0:
+        update_timeout_frame_label(seconds_untill_reset)
+        seconds_untill_reset = seconds_untill_reset - 1
+
 
 
 def close_and_reset():

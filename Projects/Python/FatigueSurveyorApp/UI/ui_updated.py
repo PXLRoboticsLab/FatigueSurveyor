@@ -33,6 +33,17 @@ class Ui_Dialog(object):
         self.Dialog.setMaximumSize(QtCore.QSize(531, 543))
         self.Dialog.setStyleSheet("border-color: rgb(0, 0, 0);\n"
 "gridline-color: rgb(0, 0, 0);")
+        self.timeout_frame =QtWidgets.QFrame(Dialog)
+        self.timeout_frame.setGeometry(QtCore.QRect(0, 320, 531, 221))
+        self.timeout_frame.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.timeout_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.timeout_frame.setObjectName("timeout_frame")
+
+        self.timeout_frame_label =QtWidgets.QLabel(self.timeout_frame)
+        self.timeout_frame_label.setGeometry(QtCore.QRect(0, 60, 531, 71))
+        self.timeout_frame_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.timeout_frame_label.setObjectName("timeout_frame_label")
+        self.timeout_frame.hide()
         self.frame = QtWidgets.QFrame(Dialog)
         self.frame.setGeometry(QtCore.QRect(0, 320, 531, 221))
         self.frame.setFrameShape(QtWidgets.QFrame.NoFrame)
@@ -110,6 +121,7 @@ class Ui_Dialog(object):
         self.energy_label_bad.setText(_translate("Dialog", "Moe"))
         self.energy_label_slider_value.setText(_translate("Dialog", "0"))
         self.image_label.setText(_translate("Dialog", ""))
+        self.timeout_frame_label.setText("")
 
     def setWindowIcon(self, param):
             pass
