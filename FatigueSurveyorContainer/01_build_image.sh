@@ -1,4 +1,4 @@
 #!/bin/bash
 
-time docker build -t anti_fatigue_app:latest .
+time docker build -t fatigue_surveyor:latest .
 
