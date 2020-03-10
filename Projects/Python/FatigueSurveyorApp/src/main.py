@@ -75,9 +75,9 @@ def set_slider_text(label, value):
 def ok_btn_clicked():
     global mainwindow
     #print("mainwindow param: " + str(level))
-    mainwindow.gif.stop()
+    # mainwindow.gif.stop()
     mainwindow.ui.image_label.setText("0")
-    mainwindow.ui.image_label.setMovie(None)
+    # mainwindow.ui.image_label.setMovie(None)
     mainwindow.ui.frame.hide()
 
     mainwindow.height = Mainwindow.minimumHeight(mainwindow.ui.Dialog)
@@ -90,7 +90,7 @@ def showFeed():
     # self.level = mainwindow.level
     global level
     global mainwindow
-    mainwindow.gif.stop()
+    # mainwindow.gif.stop()
 
     ret, frame = mainwindow.cap.read()
 
@@ -197,9 +197,10 @@ def stop_recording_timer():
         mainwindow.writer = None
         mainwindow.ui.frame.hide()
         mainwindow.ui.timeout_frame.show()
-        mainwindow.ui.image_label.setMovie(mainwindow.gif)
+        # mainwindow.ui.image_label.setMovie(mainwindow.gif)
         mainwindow.ui.buttonBox.setEnabled(False)
-        mainwindow.gif.start()
+        # mainwindow.gif.start()
+        mainwindow.ui.image_label.setPixmap(QPixmap.fromImage(QImage('../res/notUsingCam.png')))
 
     cleanup()
 
@@ -278,12 +279,13 @@ class Mainwindow(QMainWindow):
         self.ui.setupUi(self)
 
         self.cap = cv2.VideoCapture(args["camera"])
-        self.gif = QMovie('../res/whitenoise.gif', QByteArray(), self)
-        self.gif.setCacheMode(QMovie.CacheAll)
-        self.gif.setSpeed(100)
-        self.ui.image_label.setMovie(self.gif)
-
-        self.gif.start()
+        # self.gif = QMovie('../res/whitenoise.gif', QByteArray(), self)
+        # self.gif.setCacheMode(QMovie.CacheAll)
+        # self.gif.setSpeed(100)
+        # self.ui.image_label.setMovie(self.gif)
+        self.ui.image_label.setScaledContents(True)
+        self.ui.image_label.setPixmap(QPixmap.fromImage(QImage('../res/notUsingCam.png')))
+        # self.gif.start()
         # time.sleep(2.0)
         self.fourcc = None
         self.writer = None
