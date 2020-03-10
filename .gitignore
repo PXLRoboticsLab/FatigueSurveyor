@@ -1,4 +1,8 @@
 Projects/Python/AntiFatigueApp/camCaptures/*mp4
-Projects/Python/AntiFatigueApp/src/__pycache__
-Projects/Python/AntiFatigueApp/UI/__pycache__
 Projects/Python/AntiFatigueApp/test.txt
+.DS_Store
+.idea
+*.pyc
+**/*.o
+**/*.so
+**/*.pyc
