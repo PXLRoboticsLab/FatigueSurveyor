@@ -104,7 +104,7 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "AntiFat - Ben je een beetje moe?"))
+        Dialog.setWindowTitle(_translate("Dialog", "Fatigue Surveyor - Ben je een beetje moe?"))
         self.energy_label_excellent.setText(_translate("Dialog", "Energiek"))
         self.energy_label_question.setText(_translate("Dialog", "Op een schaal van 0 tot 10 hoe energiek ben je?"))
         self.energy_label_bad.setText(_translate("Dialog", "Moe"))

@@ -21,12 +21,12 @@ if [ $vendor == "NVIDIA" ]; then
         -env="XAUTHORITY=$XAUTH" \
         --volume="$XAUTH:$XAUTH" \
         --runtime=nvidia \
-	-w="/home/user/Projects/Python/AntiFatigueApp/src" \
+	-w="/home/user/Projects/Python/FatigueSurveyorApp/src" \
         --device=/dev/video0:/dev/video0 \
 	--name anti_fatigue \
-        anti_fatigue_app:latest \
+        fatigue_surveyor:latest \
         bash &&
-    docker container exec -it anti_fatigue bash -c 'xdotool windowminimize $(xdotool getactivewindow) & python3 main.py'    && docker container stop anti_fatigue  && echo "removed container" && exit
+    docker container exec -it fatigue_surveyor bash -c 'xdotool windowminimize $(xdotool getactivewindow) & python3 main.py'    && docker container stop fatigue_surveyor  && echo "removed container" && exit
     
 else
     docker run --privileged -it --rm \
@@ -37,10 +37,10 @@ else
         --device=/dev/dri:/dev/dri \
         --env="DISPLAY=$DISPLAY" \
         -e "TERM=xterm-256color" \
-	-w="/home/user/Projects/Python/AntiFatigueApp/src" \
+	-w="/home/user/Projects/Python/FatigueSurveyorApp/src" \
         --cap-add SYS_ADMIN --device /dev/fuse \
 	--name AntiFatigue \
-        anti_fatigue_app:latest \
+        fatigue_surveyor:latest \
         bash &&
-    docker container  exec -it anti_fatigue bash -c 'xdotool windowminimize $(xdotool getactivewindow) & python3 main.py'    && docker container stop anti_fatigue  && echo "removed container" && exit
+    docker container  exec -it fatigue_surveyor bash -c 'xdotool windowminimize $(xdotool getactivewindow) & python3 main.py'    && docker container stop fatigue_surveyor  && echo "removed container" && exit
 fi 
