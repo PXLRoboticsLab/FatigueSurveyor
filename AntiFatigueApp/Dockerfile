@@ -13,7 +13,7 @@ RUN python3 -m pip install PyQt5 imutils
 COPY requirements.txt /tmp/base_requirements.txt 
 
 RUN set -x && python3 -m pip install -r /tmp/base_requirements.txt 
-
+ADD app_icon.png /usr/share/pixmaps/
 
 
 USER user

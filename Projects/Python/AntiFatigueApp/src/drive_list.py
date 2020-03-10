@@ -13,9 +13,9 @@ if not creds or creds.invalid:
     creds = tools.run_flow(flow, store)
 DRIVE = discovery.build('drive', 'v3', http=creds.authorize(Http()))
 
-files = DRIVE.files().list().execute().get('files', [])
-for f in files:
-    print(f['name'], f['mimeType'])
+#files = DRIVE.files().list().execute().get('files', [])
+#for f in files:
+ #   print(f['name'], f['mimeType'])
 
 
 
@@ -28,4 +28,4 @@ def uploadFile(filename):
                             mimetype='*/*',
                             resumable=True)
     file = DRIVE.files().create(body=file_metadata, media_body=media, fields='id').execute()
-    print ('File ID: ' + file.get('id'))
+    #print ('File ID: ' + file.get('id'))
