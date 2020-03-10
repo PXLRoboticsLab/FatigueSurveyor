@@ -1,7 +1,7 @@
 Projects/Python/AntiFatigueApp/camCaptures/*mp4
 Projects/Python/AntiFatigueApp/test.txt
-.DS_Store
-.idea
+**/.DS_Store
+**/.idea
 *.pyc
 **/*.o
 **/*.so
