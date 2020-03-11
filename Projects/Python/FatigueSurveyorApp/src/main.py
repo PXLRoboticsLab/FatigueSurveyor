@@ -54,11 +54,11 @@ seconds_untill_reset =1200
 def update_slider_val():
     global level
     global mainwindow
-    print(get_slider_val())
+    get_slider_val()
 
     mainwindow.output_file = '../camCaptures/' + str(int(calendar.timegm(time.gmtime())))[5:] + "_" + str(
         level) + ".mp4"
-    print(mainwindow.output_file)
+    # print(mainwindow.output_file)
     set_slider_text(mainwindow.ui.energy_label_slider_value, level)
 
 
@@ -296,11 +296,11 @@ class Mainwindow(QMainWindow):
         self.writer = None
         self.zeros = None
         self.output_file = None
-        print(level)
+        # print(level)
 
 
 def main():
-    print(threading.enumerate())
+    # print(threading.enumerate())
     global app
     global mainwindow
 
