@@ -47,14 +47,18 @@ recording_timer = QTimer()
 reset_timer = QTimer()
 time_left = 0
 level = 5
-seconds_untill_reset =1200
+seconds_untill_reset =10
 
 
 # pop-up
 def update_slider_val():
     global level
     global mainwindow
-    get_slider_val()
+    print(get_slider_val())
+
+    mainwindow.output_file = '../camCaptures/' + str(int(calendar.timegm(time.gmtime())))[5:] + "_" + str(
+        level) + ".mp4"
+    print(mainwindow.output_file)
     set_slider_text(mainwindow.ui.energy_label_slider_value, level)
 
 
@@ -123,8 +127,8 @@ def showFeed():
         (h, w) = gray.shape[:2]
         mainwindow.fourcc = cv2.VideoWriter_fourcc(*args["codec"])
         #print(level)
-        mainwindow.output_file = '../camCaptures/' + str(int(calendar.timegm(time.gmtime())))[5:] + "_" + str(
-            level) + ".mp4"
+        # mainwindow.output_file = '../camCaptures/' + str(int(calendar.timegm(time.gmtime())))[5:] + "_" + str(level) + ".mp4"
+        print(mainwindow.output_file)
         mainwindow.writer = cv2.VideoWriter(mainwindow.output_file, mainwindow.fourcc, int(args["fps"]),
                                             (int(w), int(h)), 0)
         # self.zeros = np.zeros((height, width), dtype="uint8")
@@ -215,7 +219,7 @@ def reset_app():
     # print("reset_app"+threading.enumerate().__str__())
     main()
 
-    timer.timeout.connect(showFeed)
+    # timer.timeout.connect(showFeed)
     upload_vid()
 
 
@@ -232,7 +236,7 @@ def cleanup():
     global recording_timer
     global app
     global seconds_untill_reset
-    seconds_untill_reset=1200
+    seconds_untill_reset=10
     reset_timer.start(1000)
     reset_timer.timeout.connect(timer_timeout_countdown)
     # reset_app()
@@ -274,6 +278,7 @@ def close_and_reset():
 class Mainwindow(QMainWindow):
 
     def __init__(self):
+        global level
         super().__init__()
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
@@ -291,7 +296,7 @@ class Mainwindow(QMainWindow):
         self.writer = None
         self.zeros = None
         self.output_file = None
-        #print(level)
+        print(level)
 
 
 def main():
