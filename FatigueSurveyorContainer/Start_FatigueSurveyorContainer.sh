@@ -20,7 +20,7 @@ if [ $vendor == "NVIDIA" ]; then
         -v `pwd`/../Projects:/home/user/Projects \
         -env="XAUTHORITY=$XAUTH" \
         --volume="$XAUTH:$XAUTH" \
-        --runtime=nvidia \
+        --gpus all \
 	-w="/home/user/Projects/Python/FatigueSurveyorApp/src" \
         --device=/dev/video0:/dev/video0 \
 	--name fatigue_surveyor \
