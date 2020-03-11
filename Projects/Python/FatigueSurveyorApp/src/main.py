@@ -47,7 +47,7 @@ recording_timer = QTimer()
 reset_timer = QTimer()
 time_left = 0
 level = 5
-seconds_untill_reset =10
+seconds_untill_reset =1200
 
 
 # pop-up
@@ -236,7 +236,7 @@ def cleanup():
     global recording_timer
     global app
     global seconds_untill_reset
-    seconds_untill_reset=10
+    seconds_untill_reset=1200
     reset_timer.start(1000)
     reset_timer.timeout.connect(timer_timeout_countdown)
     # reset_app()
