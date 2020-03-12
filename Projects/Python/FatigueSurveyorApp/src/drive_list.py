@@ -17,12 +17,14 @@ DRIVE = discovery.build('drive', 'v3', http=creds.authorize(Http()))
 #for f in files:
  #   print(f['name'], f['mimeType'])
 
-
+upload_folder =DRIVE.files().list(orderBy='createdTime desc',q="mimeType='application/vnd.google-apps.folder'").execute().get('files',[])
+f=upload_folder[0]['id']
 
 def uploadFile(filename):
     file_metadata = {
     'name': filename,
-    'mimeType': '*/*'
+    'mimeType': '*/*',
+    'parents':[f]
     }
     media = MediaFileUpload(filename,
                             mimetype='*/*',

@@ -1,5 +1,6 @@
 import argparse
 import calendar
+import datetime
 import glob
 import os
 import threading
@@ -56,7 +57,7 @@ def update_slider_val():
     global mainwindow
     get_slider_val()
 
-    mainwindow.output_file = '../camCaptures/' + str(int(calendar.timegm(time.gmtime())))[5:] + "_" + str(
+    mainwindow.output_file = '../camCaptures/' + str(datetime.datetime.now().timestamp()).split('.')[0] + "_" + str(
         level) + ".mp4"
     # print(mainwindow.output_file)
     set_slider_text(mainwindow.ui.energy_label_slider_value, level)
