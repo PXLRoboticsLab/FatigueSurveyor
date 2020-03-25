@@ -4,12 +4,20 @@ from googleapiclient import discovery
 from googleapiclient.http import MediaFileUpload
 from httplib2 import Http
 from oauth2client import file, client, tools
+import sys
+import os
+file_dir = os.path.dirname(__file__)
+# print(file_dir)
+sys.path.append(file_dir)
+sys.path.append(os.path.dirname(file_dir))
 
+
+print(sys.path)
 SCOPES = 'https://www.googleapis.com/auth/drive'
-store = file.Storage('./storage.json')
+store = file.Storage(file_dir+ '/storage.json')
 creds = store.get()
 if not creds or creds.invalid:
-    flow = client.flow_from_clientsecrets('./client_id.json', SCOPES)
+    flow = client.flow_from_clientsecrets(file_dir+ '/client_id.json', SCOPES)
     creds = tools.run_flow(flow, store)
 DRIVE = discovery.build('drive', 'v3', http=creds.authorize(Http()))
 

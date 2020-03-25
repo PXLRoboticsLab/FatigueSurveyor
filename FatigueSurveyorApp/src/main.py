@@ -10,11 +10,21 @@ import cv2
 import imutils
 
 import numpy as np
-sys.path.append("../UI")
-sys.path.append("../src")
-sys.path.append("./")
 
-from ui_updated import *
+
+file_dir = os.path.dirname(__file__)
+print(file_dir)
+sys.path.append(file_dir)
+sys.path.append(os.path.dirname(file_dir))
+sys.path.append("./")
+UI = os.path.dirname(file_dir)
+
+res = os.path.dirname(file_dir)+'/res/'
+print(os.path.exists(res+'/notUsingCam.png'))
+
+print(os.path.dirname(res))
+
+from UI.ui_updated import *
 
 
 from PyQt5.QtCore import QTimer, QByteArray
@@ -57,7 +67,7 @@ def update_slider_val():
     global mainwindow
     get_slider_val()
 
-    mainwindow.output_file = '../camCaptures/' + str(datetime.datetime.now().timestamp()).split('.')[0] + "_" + str(
+    mainwindow.output_file = os.path.dirname(file_dir)+'/camCaptures/' + str(datetime.datetime.now().timestamp()).split('.')[0][2:] + "_" + str(
         level) + ".mp4"
     # print(mainwindow.output_file)
     set_slider_text(mainwindow.ui.energy_label_slider_value, level)
@@ -205,7 +215,7 @@ def stop_recording_timer():
         # mainwindow.ui.image_label.setMovie(mainwindow.gif)
         mainwindow.ui.buttonBox.setEnabled(False)
         # mainwindow.gif.start()
-        mainwindow.ui.image_label.setPixmap(QPixmap.fromImage(QImage('../res/notUsingCam.png')))
+        mainwindow.ui.image_label.setPixmap(QPixmap.fromImage(QImage(res+'/notUsingCam.png')))
 
     cleanup()
 
@@ -290,7 +300,7 @@ class Mainwindow(QMainWindow):
         # self.gif.setSpeed(100)
         # self.ui.image_label.setMovie(self.gif)
         self.ui.image_label.setScaledContents(True)
-        self.ui.image_label.setPixmap(QPixmap.fromImage(QImage('../res/notUsingCam.png')))
+        self.ui.image_label.setPixmap(QPixmap.fromImage(QImage(res+'/notUsingCam.png')))
         # self.gif.start()
         # time.sleep(2.0)
         self.fourcc = None
