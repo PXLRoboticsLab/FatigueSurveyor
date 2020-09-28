@@ -1,6 +1,6 @@
 # FatigueSurveyor
 
-This repositoy contains a simple docker container and python application for collecting labeled training data.
+This repository contains a simple docker container and python application for collecting labeled training data.
 
 
 
